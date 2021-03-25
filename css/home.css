@@ -1,0 +1,43 @@
+/*! Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins';
+  }
+
+.container{
+    width: 100vw;
+    height: 100vh;  
+    background: #222736;
+    display: flex;
+}
+
+/*? Aside */
+
+.aside {
+    width: 18%;
+    height:100%;
+    background: #2A3142;
+}
+
+
+/*? Header */
+
+.header {
+    width: 82%;
+    height: 11%;
+    background:#36394C;
+}
+
+/*? Main */
+
+main {
+    width: 82%;
+    height:89%;
+    background: none;
+    position: absolute;
+    top: 11%;
+    left: 18%;
+}
