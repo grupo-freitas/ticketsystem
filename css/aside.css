@@ -1,0 +1,29 @@
+
+/*! Aside */
+
+.aside {
+    width: 15%;
+    height: 100%;
+    background: #2a3142;
+  }
+  
+  .titleAside {
+    width: 100%;
+    height: 7%;
+  
+    background: #2a3142;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .titleAside h1 {
+    color: #fff;
+    font-size: 1.3rem;
+  
+    text-decoration: underline;
+  }
+  
+  .titleAside span {
+    font-weight: 200;
+  }

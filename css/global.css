@@ -1,0 +1,17 @@
+/*! Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins";
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #222736;
+  display: flex;
+}
+
+
