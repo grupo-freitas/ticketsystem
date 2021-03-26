@@ -58,7 +58,7 @@ main {
   
   .newTicket button{
       margin-right: 1rem;
-      padding: 0.5rem 0.4rem;
+      padding: 0.7rem 1rem;
       border: 0;
       border-radius: 0.3rem;
   
@@ -72,7 +72,7 @@ main {
   
   .newTicket p{
       color: white;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       font-weight: 200;
   
   }
