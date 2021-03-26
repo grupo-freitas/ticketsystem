@@ -5,6 +5,10 @@
     width: 15%;
     height: 100%;
     background: #2a3142;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   
   .titleAside {
@@ -26,4 +30,53 @@
   
   .titleAside span {
     font-weight: 200;
+  }
+
+  .titleMenu {
+      width:85%;
+      height:3%;
+
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 0.5rem;
+  }
+
+  .titleMenu p{
+      color: grey;
+      font-weight: 400;
+      font-size: 0.6rem;
+  }
+
+  .itens{
+      width:100%;
+      height:5%;
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      cursor: pointer;
+  }
+
+  .itens:hover{
+      background: #2F374A;
+  }
+
+  .iten{
+      width:85%;
+      height:100%;
+      background:none;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start
+  }
+
+  .iten i {
+      color: #838b9e;
+      margin-right: 1rem;
+  }
+
+  .iten p {
+      color: #838b9e;
+      font-weight: 200;
   }
