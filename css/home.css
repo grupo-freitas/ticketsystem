@@ -1,43 +1,131 @@
 /*! Global */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    font-family: 'Poppins';
-  }
-
-.container{
-    width: 100vw;
-    height: 100vh;  
-    background: #222736;
-    display: flex;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins";
 }
 
-/*? Aside */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #222736;
+  display: flex;
+}
+
+/*! Aside */
 
 .aside {
-    width: 18%;
-    height:100%;
-    background: #2A3142;
+  width: 15%;
+  height: 100%;
+  background: #2a3142;
 }
 
+.titleAside {
+  width: 100%;
+  height: 7%;
 
-/*? Header */
+  background: #2a3142;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleAside h1 {
+  color: #fff;
+  font-size: 1.3rem;
+
+  text-decoration: underline;
+}
+
+.titleAside span {
+  font-weight: 200;
+}
+
+/*! Header */
 
 .header {
-    width: 82%;
-    height: 11%;
-    background:#36394C;
+  width: 85%;
+  height: 7%;
+  background: #36394c;
+
+  display: flex;
+  flex-direction: row;
 }
 
-/*? Main */
+.newTicket {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.newTicket i {
+  color: #fff;
+  font-size: 1.2rem;
+
+  margin: 0 1rem;
+
+  cursor: pointer;
+}
+
+.newTicket button {
+  padding: 0.4rem;
+
+  border: 0;
+  border-radius: 0.2rem;
+
+  background: #3c445a;
+
+  cursor: pointer;
+}
+
+.newTicket button:hover {
+  background: #2a3142;
+}
+
+.newTicket button p {
+  color: #fff;
+  font-weight: 200;
+}
+
+.settings {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.settings i {
+  color: #fff;
+  font-size: 1.2rem;
+
+  margin: 0 1rem;
+
+  cursor: pointer;
+}
+
+/*! Main */
 
 main {
-    width: 82%;
-    height:89%;
-    background: none;
-    position: absolute;
-    top: 11%;
-    left: 18%;
+  width: 85%;
+  height: 93%;
+  background: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.mainContent {
+    width: 97%;
+    height: 98%;
+    background: red
 }
