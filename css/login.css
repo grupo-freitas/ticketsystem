@@ -65,6 +65,8 @@ main {
   border: 2px solid #8257E6;
   padding: 8px;
   margin: 5px 0 15px;
+  display: flex;
+  flex-direction: row;
 }
 
 label {
@@ -104,5 +106,27 @@ button:hover{
 }
 
 button, .icon-input {
-  border-radius: 8px;
+  border-radius: 6px;
+}
+
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+  box-shadow: 0 0 0 30px #121214 inset !important;
+}
+
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+  -webkit-text-fill-color: #fff !important;
+}
+
+@media (max-width: 768px){
+  .logo h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 550px){
+  .logo h1 {
+    font-size: 23px;
+  }
 }

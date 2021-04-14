@@ -166,3 +166,25 @@ input:-webkit-autofill {
 input:-webkit-autofill {
   -webkit-text-fill-color: #fff !important;
 }
+
+@media (max-width: 768px){
+  input {
+    width: 65%;
+  }
+
+  .info header {
+    height: 15vh;
+  }
+
+  .info footer {
+    width: 90%;
+  }
+
+  .info footer h2 {
+    font-size: 27px;
+  }
+
+  .info footer p {
+    font-size: 12px;
+  }
+}
