@@ -8,11 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/login.css">
-    <title>Login</title>
+    <script src="./js/login.js" defer></script>
+    <title>Login | Grupo Freitas </title>
   </head>
   <body>
+
+    <div class="load">
+      <div class="spiner"></div>
+    </div>
+
     <main>
       <section class="container">
+
         <div class="background">
           <img src="./images/login_bg.svg" alt="login_bg" />
         </div>
@@ -26,13 +33,13 @@
             <label for="login">Login</label>
             <div class="icon-input">
               <i class="fas fa-user"></i>
-              <input type="login" />
+              <input type="login" name="login"/>
             </div>
 
             <label for="password">Senha</label>
             <div class="icon-input">
               <i class="fas far fa-unlock-alt"></i>
-              <input type="password" />
+              <input type="password" name="password" />
             </div>
 
             <button type="submit">Acessar</button>
