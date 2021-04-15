@@ -23,9 +23,8 @@
   
   .titleAside h1 {
     color: rgb(228, 228, 228);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   
-    text-decoration: underline;
   }
   
   .titleAside span {
@@ -79,4 +78,8 @@
   .iten p {
       color: #838b9e;
       font-weight: 200;
+  }
+
+  .titleAside h1:hover{
+
   }
