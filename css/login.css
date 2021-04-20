@@ -116,6 +116,19 @@ form span {
   margin-top: -7px;
 }
 
+form p {
+  margin-top: 10px  ;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 300;
+}
+
+form p a{
+  color: #8257E6;
+  text-decoration: none;
+}
+
+
 
 /* Cor de fundo do autocomplete */
 input:-webkit-autofill {
