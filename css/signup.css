@@ -14,7 +14,6 @@ main {
   align-items: center;
   justify-content: center;
 }
-
 .container {
   width: 95%;
   height: 93%;
@@ -49,7 +48,9 @@ main {
   flex-direction: column;
 }
 
-.icon-input{
+.icon-input, select{
+  background: #121214;
+  color: #fff;
   border: 2px solid #8257E6;
   padding: 8px;
   margin: 5px 0 15px;
@@ -107,6 +108,13 @@ button, .icon-input {
   color: #8257E6;
   font-weight: 300;
   text-decoration: none;
+}
+
+form span {
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin-top: -7px;
 }
 
 .info {

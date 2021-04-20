@@ -1,0 +1,25 @@
+.load{
+  width:100vw;
+  height: 100vh;
+  background: #121212;
+  position: fixed;
+  opacity: 0.9;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.load .spiner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 10px solid;
+  border-color: #202020 #8257E6;
+  animation: 1.2s spin infinite
+}
+
+@keyframes spin{
+  to {
+    transform: rotate(360deg)
+  }
+}
