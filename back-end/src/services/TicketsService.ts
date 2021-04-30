@@ -39,4 +39,12 @@ export default class TicketsService {
 
     return ticket
   }
+
+  async show () {
+    const tickets = await this.ticketsRepository.find()
+
+    if (tickets.length === 0) throw new Error('No tickets registered ')
+
+    return tickets
+  }
 }

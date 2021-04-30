@@ -1,12 +1,20 @@
 import { getCustomRepository, Repository } from 'typeorm'
 import Users from '../entities/Users'
 import UsersRepository from '../repositories/UsersRepository'
+import { compareSync } from 'bcrypt'
+import jwt from 'jsonwebtoken'
+import secret from '../config/secret'
 
 interface IUsersCreate{
   name: string
   login: string
   password: string
   sector: string
+}
+
+interface IUsersLogin{
+  login: string
+  password: string
 }
 
 export default class UsersService {
@@ -25,13 +33,33 @@ export default class UsersService {
 
     await this.usersRepository.save(user)
 
+    user.password = undefined
+
     return user
+  }
+
+  async login ({ login, password }: IUsersLogin) {
+    const user: string | any = await this.usersRepository.findOne({ login })
+
+    if (!user) throw new Error('user not exists')
+
+    const compare = compareSync(password, user.password)
+
+    if (compare === false) throw new Error('Invalid password')
+
+    user.password = undefined
+
+    const token = jwt.sign({ id: user.id }, secret, { expiresIn: '30m' })
+
+    return { user, token }
   }
 
   async show () {
     const user = await this.usersRepository.find()
 
-    if (user.length === 0) throw new Error('No registered user')
+    if (user.length === 0) throw new Error('No user registered')
+
+    for (const i of user) i.password = undefined
 
     return user
   }

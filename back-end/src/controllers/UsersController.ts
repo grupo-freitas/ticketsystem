@@ -16,10 +16,21 @@ export default class UsersController {
 
     try {
       const user = await usersService.create({ name, login, password: newPassword, sector })
-
-      user.password = undefined
-
       return res.status(201).json(user)
+    } catch (err) {
+      return res.status(400).json({ msg: err.message })
+    }
+  }
+
+  async login (req: Request, res: Response): Promise<Response> {
+    const usersService = new UsersService()
+
+    const { login, password } = req.body
+
+    try {
+      const user = await usersService.login({ login, password })
+
+      return res.status(200).json(user)
     } catch (err) {
       return res.status(400).json({ msg: err.message })
     }
