@@ -1,7 +1,7 @@
 import express from 'express'
 import routes from './routes'
 import path from 'path'
-import './database'
+import createConnection from './database'
 
 class App {
   express: express.Application
@@ -10,6 +10,7 @@ class App {
     this.express = express()
     this.middlewares()
     this.routes()
+    this.database()
   }
 
   private middlewares () {
@@ -19,6 +20,10 @@ class App {
 
   private routes () {
     this.express.use(routes)
+  }
+
+  private database () {
+    createConnection()
   }
 }
 

@@ -1,17 +1,12 @@
-/*
- * For a detailed explanation regarding each configuration property and type check, visit:
- * https://jestjs.io/docs/en/configuration.html
- */
-
 export default {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
   // Stop running tests after `n` failures
-  bail: 1,
+  bail: true,
 
   // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "C:\\Users\\guevaristo\\AppData\\Local\\Temp\\jest",
+  // cacheDirectory: "C:\\Users\\Gustavo\\AppData\\Local\\Temp\\jest",
 
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
@@ -23,7 +18,7 @@ export default {
   // collectCoverageFrom: undefined,
 
   // The directory where Jest should output its coverage files
-  // coverageDirectory: './src/__tests__/coverage',
+  // coverageDirectory: undefined,
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -35,10 +30,10 @@ export default {
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
-  //   'json',
-  //   'text',
-  //   'lcov',
-  //   'clover'
+  //   "json",
+  //   "text",
+  //   "lcov",
+  //   "clover"
   // ],
 
   // An object that configures minimum threshold enforcement for coverage results
@@ -137,7 +132,7 @@ export default {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: 'node',
+  // testEnvironment: "node",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -147,7 +142,7 @@ export default {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    '**/__tests__/**/*.ts'
+    '**/__tests__/**/*.test.ts'
   ]
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
