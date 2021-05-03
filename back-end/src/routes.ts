@@ -15,6 +15,7 @@ const routes = Router()
 routes.get('/', usersController.show)
 routes.post('/', usersController.create)
 routes.post('/login', usersController.login)
+routes.post('/changePassword', usersController.changePassword)
 
 routes.get('/ticket', ticketsController.show)
 routes.post('/ticket', auth, upload.array('files'), ticketsController.create)

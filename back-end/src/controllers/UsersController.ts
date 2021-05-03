@@ -46,4 +46,26 @@ export default class UsersController {
       return res.json({ msg: err.message })
     }
   }
+
+  async changePassword (req:Request, res: Response): Promise<Response> {
+    const usersService = new UsersService()
+
+    const { login, password, passwordConfirm } = req.body
+
+    if (password !== passwordConfirm) {
+      return res.status(400).json({ msg: 'invalid pasword' })
+    }
+
+    const salt = genSaltSync(10)
+
+    const newPassword = hashSync(password, salt)
+
+    try {
+      await usersService.changePassword({ login, password: newPassword })
+
+      return res.status(201).json({ msg: 'password changed' })
+    } catch (err) {
+      return res.status(400).json({ msg: err.message })
+    }
+  }
 }

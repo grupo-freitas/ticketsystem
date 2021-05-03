@@ -12,7 +12,12 @@ interface IUsersCreate{
   sector: string
 }
 
-interface IUsersLogin{
+interface IUsersLogin {
+  login: string
+  password: string
+}
+
+interface IUsersChangePassword {
   login: string
   password: string
 }
@@ -62,5 +67,17 @@ export default class UsersService {
     for (const i of user) i.password = undefined
 
     return user
+  }
+
+  async changePassword ({ login, password }: IUsersChangePassword) {
+    const userExists = await this.usersRepository.findOne({ login })
+
+    if (!userExists) throw new Error('User not exists')
+
+    userExists.password = password
+
+    await this.usersRepository.save(userExists)
+
+    return userExists
   }
 }
