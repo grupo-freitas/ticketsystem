@@ -6,26 +6,6 @@
   font-family: 'Poppins';
 }
 
-.load{
-  width:100vw;
-  height: 100vh;
-  background: #121212;
-  position: fixed;
-  opacity: 0.8;
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-
-.load .spiner {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 10px solid;
-  border-color: #202020 #8257E6;
-  animation: 1.2s spin infinite
-}
-
 main {
   width: 100vw;
   height: 100vh;
@@ -129,6 +109,27 @@ button, .icon-input {
   border-radius: 6px;
 }
 
+form span {
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin-top: -7px;
+}
+
+form p {
+  margin-top: 10px  ;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 300;
+}
+
+form p a{
+  color: #8257E6;
+  text-decoration: none;
+}
+
+
+
 /* Cor de fundo do autocomplete */
 input:-webkit-autofill {
   box-shadow: 0 0 0 30px #121214 inset !important;
@@ -148,11 +149,5 @@ input:-webkit-autofill {
 @media (max-width: 550px){
   .logo h1 {
     font-size: 23px;
-  }
-}
-
-@keyframes spin{
-  to {
-    transform: rotate(360deg)
   }
 }

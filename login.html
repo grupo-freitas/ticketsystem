@@ -8,7 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/load.css">
+    <script src="./js/load.js" defer></script>
     <script src="./js/login.js" defer></script>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
     <title>Login | Grupo Freitas </title>
   </head>
   <body>
@@ -33,16 +36,19 @@
             <label for="login">Login</label>
             <div class="icon-input">
               <i class="fas fa-user"></i>
-              <input type="login" name="login"/>
+              <input type="login" name="login"/>              
             </div>
+            <span class="error" id="loginError">Usuário inválido</span>
 
             <label for="password">Senha</label>
             <div class="icon-input">
               <i class="fas far fa-unlock-alt"></i>
               <input type="password" name="password" />
             </div>
+            <span class="error" id="passwordError" >Senha inválida</span>
 
             <button type="submit">Acessar</button>
+            <p>Não possui uma conta?<a href="/signup"> clique aqui para se cadastrar.</a></p>
           </form>
         </div>
       </section>
