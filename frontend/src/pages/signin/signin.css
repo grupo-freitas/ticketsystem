@@ -67,11 +67,19 @@
     margin-right: 10px;
   }
   
-  input {
+  input, select{
     background: none;
     border: none;
     color: #fff;
     width: 83%;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  option {
+    background: #121214;
   }
   
   button {
