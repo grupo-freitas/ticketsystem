@@ -40,6 +40,14 @@ export default class TicketsService {
     return ticket
   }
 
+  async close (id: string) {
+    const ticket = await this.ticketsRepository.findOne({ id })
+
+    if (ticket.status === 'aberto') {
+      ticket.status = 'fechado'
+    }
+  }
+
   async show () {
     const tickets = await this.ticketsRepository.find()
 

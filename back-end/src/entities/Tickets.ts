@@ -25,6 +25,9 @@ export default class Tickets {
   @Column()
   subject?: string
 
+  @Column()
+  status?: string
+
   @JoinColumn({ name: 'userId' })
   @ManyToOne(() => Users)
   user?: Users
